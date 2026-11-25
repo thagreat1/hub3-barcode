@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HUB3 Barcode Generator</title>
+  <script src="https://cdn.jsdelivr.net/npm/pdf417-generator@latest/dist/pdf417-generator.min.js"></script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 480px; margin: 0 auto; padding: 16px; background: #f4f6f8; color: #222; }
+    h2 { text-align: center; margin-bottom: 16px; }
+    .card { background: #fff; padding: 16px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 16px; }
+    h3 { margin: 12px 0 8px; font-size: 15px; color: #555; border-bottom: 1px solid #eee; padding-bottom: 4px; }
+    label { display: block; font-size: 13px; font-weight: 600; margin: 8px 0 4px; }
+    input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box; font-size: 15px; }
+    button { width: 100%; padding: 12px; background: #2ea44f; color: #fff; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; margin-top: 16px; cursor: pointer; }
+    button.secondary { background: #0969da; margin-top: 10px; }
+    .output { text-align: center; }
+    canvas { max-width: 100%; height: auto; margin-top: 10px; border: 1px solid #eee; padding: 8px; background: #fff; }
+    #error { color: #cf222e; font-size: 14px; font-weight: 600; margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+  <h2>HUB-3A Barcode Generator</h2>
+
+  <div class="card">
+    <label>Amount (EUR)</label>
+    <input type="number" id="amount" step="0.01" value="123.55">
+
+    <h3>Payer (Sender)</h3>
+    <label>Name (max 30 chars)</label>
+    <input type="text" id="senderName" maxlength="30" value="PETAR KORETIĆ">
+    <label>Street (max 27 chars)</label>
+    <input type="text" id="senderStreet" maxlength="27" value="PREVOJ DD">
+    <label>Postal Code & City (max 27 chars)</label>
+    <input type="text" id="senderCity" maxlength="27" value="10000 Zagreb">
+
+    <h3>Recipient (Receiver)</h3>
+    <label>Name (max 25 chars)</label>
+
+    
